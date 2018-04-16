@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { UserService } from './user.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { HomeModule } from './home/home.module';
-import { AuthGuard } from './auth.guard';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +18,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     AdminModule,
     HomeModule,
-    SharedModule
-  ],
-  providers: [
-    UserService,
-    AuthGuard
+    SharedModule,
+    CoreModule
   ],
   bootstrap: [AppComponent]
 })
