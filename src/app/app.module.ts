@@ -4,26 +4,22 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UserService } from './user.service';
-import { UppercasePipe } from './uppercase.pipe';
-import { ToggleDirective } from './toggle.directive';
-import { AuthGuard } from './auth.guard';
-import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin/admin.module';
 import { HomeModule } from './home/home.module';
+import { AuthGuard } from './auth.guard';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UppercasePipe,
-    ToggleDirective,
-    LoadingSpinnerComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AdminModule,
-    HomeModule
+    HomeModule,
+    SharedModule
   ],
   providers: [
     UserService,
