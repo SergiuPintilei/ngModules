@@ -11,6 +11,8 @@ const routes = [];
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomeComponent]
+  declarations: [
+    HomeComponent
+  ]
 })
 export class HomeModule { }
