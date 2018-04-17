@@ -4,7 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
 
-const routes = [];
+const routes = [
+  { path: 'lazy', component: AdminComponent },
+];
 
 @NgModule({
   imports: [
