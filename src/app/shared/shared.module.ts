@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ToggleDirective } from './directives/toggle.directive';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 import { UppercasePipe } from './pipes/uppercase.pipe';
+import { MyService } from './my.service';
 
 @NgModule({
   imports: [
@@ -20,4 +21,13 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
     UppercasePipe
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SharedModule,
+      providers: [
+        MyService
+      ]
+    };
+  }
+}

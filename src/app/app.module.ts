@@ -18,7 +18,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     AdminModule,
     HomeModule,
-    SharedModule,
+    SharedModule.forRoot(),
     CoreModule
   ],
   bootstrap: [AppComponent]
